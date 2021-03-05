@@ -96,7 +96,7 @@ var numbers = "1234567890";
 var special = "~!@#$%^&*()_+{}|`=-[];/<>,.?"
 let password = "";
 
- 
+let passwordEl = document.querySelector("#password");
 // Function to check chosenPassLength's validity
 var passLengthCheck = function() {
 
@@ -124,7 +124,6 @@ passLengthCheck();
 // }
 // Event Listener for generateBtn
 generateBtn.addEventListener("click", function() {
-    console.log(chosenPassLength);
     // if useUpperCase is true
     if (useUpperCase) {
         // add upperCaseLetters to characters
@@ -157,5 +156,6 @@ generateBtn.addEventListener("click", function() {
     }
 
     console.log(password);
+    passwordEl.textContent = password;
 
 })
