@@ -94,6 +94,7 @@ var upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCaseLetters = "abcdefghijklmnopqurstuvwxyz";
 var numbers = "1234567890";
 var special = "~!@#$%^&*()_+{}|`=-[];/<>,.?"
+let password = "";
 
  
 // Function to check chosenPassLength's validity
@@ -112,7 +113,7 @@ var passLengthCheck = function() {
             chosenPassLength = prompt("The input must be a number. Please try again.")
             passLengthCheck();
         }
-
+        // return chosenPassLength;
     }
 
 passLengthCheck();
@@ -123,29 +124,38 @@ passLengthCheck();
 // }
 // Event Listener for generateBtn
 generateBtn.addEventListener("click", function() {
+    console.log(chosenPassLength);
     // if useUpperCase is true
     if (useUpperCase) {
         // add upperCaseLetters to characters
         characters += upperCaseLetters;  
     }  
-    console.log(characters);
     // if useLowerCase is true
     if (useLowerCase) {
         // add lowerCaseLetters to characters
         characters += lowerCaseLetters;
     }
-    console.log(characters);
+
     // if useNumbers is true
     if (useNumber) {
         // add numbers to characters
         characters += numbers; 
     }
-    console.log(characters);
     // if useSpecial is true
     if (useSpecial) {
         // add special to characters
         characters += special;
     }
 
-    
+    console.log(characters);
+
+    //pass word generation
+    for (var i = 0; i < chosenPassLength; i++) {
+        let randomChar = characters[Math.floor(Math.random() * characters.length)];
+        password += randomChar
+        console.log(randomChar);
+    }
+
+    console.log(password);
+
 })
