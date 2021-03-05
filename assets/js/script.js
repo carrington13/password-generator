@@ -1,84 +1,7 @@
 // Assignment code here
 
-// Prompt user for password criteria and save it as a variable
-// var useUpperCase = confirm("Use uppercase letters?");
-// var useLowerCase = confirm("Use lowercase letters?");
-// var useSpecial = confirm("Use special characters?");
-// var useNumber = confirm("Use numbers?");
-// var chosenPassLength = prompt("How many characters do you want your password to be?");
-// let characters = "";
-//consider saving variables to an object
- 
-//   upperCase: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'X', 'Y', 'Z' ],
-//   lowerCase: "",
-//   special: "!",
-//   number: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
-//   passLength: 0,
-// }
-  
-
-
-
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-/*function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-*/
-
-// Add event listener to generate button
-/*generatePasswordBtnEl.addEventListener("click", function() {
-  let useUpperCase = window.confirm("Do you want to use uppercase letters?");
-  let useLowerCase = window.confirm("Do you want to use lowercase letters?");
-  let useNumbers =  window.confirm("Do you want to use numbers?");
-  let useSpecial =  window.confirm("Do you want to use special characters?");
-  let chosenPassLength = window.prompt("How long do you want the password to be? Please enter a number.");
-  
-  if (useUpperCase) {
-      let characters = characters + upperCase;
-  }
-  if (useLowerCase) {
-      characters = characters + lowerCase;
-  }
-  if (useNumbers) {
-      characters += numbers;
-  }
-  if (useSpecial) {
-      characters += specialChar;
-  }
-  if (chosenPassLength < 8 || chosenPassLength) {
-      window.alert("The password must be at least 8 characters long.");
-  } else if (chosenPassLength > 128) {
-      window.alert("The password cannot exceed 128 characters.");
-      } else {
-          for (i = 0; i < chosenPassLength; i++) {
-          randomChar = character[Math.floor(Math.random() * characters.length)];
-          password = password + randomChar;
-          }
-        }
-
-      }
-)*/
-
-
-/* consider doing this to add to characters the string, each
-character is assigned a indexed value starting at zero and will loop until
-selectedLength is achieved.  
-
-var listItemEl = document.createElement("li");
-    listItemEl.className = "task-item";
-    listItemEl.setAttribute("data-task-id", taskIdCounter); */
-
-
-    //TODO Add selected criteria lists to an array (characters in example below).
-    //TODO let random = characters[Math.floor(Math.Random() * characters.length)] will get a random index from array.
-    //TODO loop above Math and save values to a string. Save string to .textContent of password box.
 
 // prompt user for desired password criteria and save it to a variable
 var useUpperCase = confirm("Use uppercase letters?");
@@ -117,11 +40,7 @@ var passLengthCheck = function() {
     }
 
 passLengthCheck();
-// let i = 0
 
-// for (i = 0; i < characters.length; i++) {
-//     console.log(characters[i]);
-// }
 // Event Listener for generateBtn
 generateBtn.addEventListener("click", function() {
     // if useUpperCase is true
