@@ -9,6 +9,7 @@ A password generator that generates a randomized password based on user selected
 * JAVASCRIPT
 
 ## Deployed URL
+https://carrington13.github.io/password-generator/
 
 ## Screenshot
 
